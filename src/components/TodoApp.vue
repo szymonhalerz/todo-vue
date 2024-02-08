@@ -55,7 +55,7 @@ export default {
 					status: 'to-do',
 				})
 			} else {
-				tasks.value[editedTask].name = task.value
+				tasks.value[editedTask.value].name = task.value
 				editedTask.value = null
 			}
 
@@ -77,7 +77,7 @@ export default {
 
 		const editTask = index => {
 			task.value = tasks.value[index].name
-			editedTask.value = index.value
+			editedTask.value = index
 		}
 
 		return {
